@@ -1,0 +1,14 @@
+#!/bin/bash -x
+
+# To pull the image
+docker pull nginx
+
+# Create Dockerfile with the below
+FROM nginx
+COPY static-html-directory /usr/share/nginx/html
+
+# Build
+docker build -t kcs-nginx .
+
+# Run
+docker run --name kcs-nginx -d -p 8088:80 kcs-nginx

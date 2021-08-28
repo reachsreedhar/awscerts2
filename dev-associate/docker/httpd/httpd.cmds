@@ -1,0 +1,5 @@
+#!/bin/bash -x
+
+#docker pull httpd
+#docker build -t my-apache2 .
+docker run -dit --name kcs-httpd -p 8087:80 my-apache2

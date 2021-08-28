@@ -1,0 +1,39 @@
+AWSConfigurationTemplateVersion: 1.1.0.0
+EnvironmentConfigurationMetadata:
+  DateCreated: '1629676150000'
+  DateModified: '1629676277265'
+  Description: Configuration created from the EB CLI using "eb config save".
+EnvironmentTier:
+  Name: WebServer
+  Type: Standard
+OptionSettings:
+  AWSEBAutoScalingScaleUpPolicy.aws:autoscaling:trigger:
+    UpperBreachScaleIncrement: '2'
+  AWSEBCloudwatchAlarmHigh.aws:autoscaling:trigger:
+    UpperThreshold: '50'
+  AWSEBCloudwatchAlarmLow.aws:autoscaling:trigger:
+    LowerThreshold: '20'
+    MeasureName: CPUUtilization
+    Unit: Percent
+  aws:autoscaling:launchconfiguration:
+    EC2KeyName: schidambaram
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+  aws:autoscaling:updatepolicy:rollingupdate:
+    RollingUpdateEnabled: true
+    RollingUpdateType: Health
+  aws:elasticbeanstalk:application:environment:
+    ENABLED_COOL_NEW_FEATURE: true
+  aws:elasticbeanstalk:command:
+    BatchSize: '30'
+    BatchSizeType: Percentage
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+  aws:elasticbeanstalk:healthreporting:system:
+    SystemType: enhanced
+  aws:elb:loadbalancer:
+    CrossZone: true
+  aws:elb:policies:
+    ConnectionDrainingEnabled: true
+Platform:
+  PlatformArn: arn:aws:elasticbeanstalk:us-east-1::platform/PHP 8.0 running on 64bit
+    Amazon Linux 2/3.3.4

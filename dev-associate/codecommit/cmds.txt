@@ -1,0 +1,6 @@
+#!/bin/bash -x
+#git clone ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/kcs-app
+git clone ssh://APKATOYYAB33MEXOQZPA@git-codecommit.us-east-1.amazonaws.com/v1/repos/kcs-app
+
+schidambaram-at-237884149494
+MIR+1mKh8KeOJcPXWHN7jR/nb+6ZQpeF4JYNYqnmZuI=
